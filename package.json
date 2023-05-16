@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "resume-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.4.1",
-    "next": "13.4.1",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@next/font": "^13.3.0",
+    "@reduxjs/toolkit": "^1.9.3",
+    "bootstrap": "^5.2.3",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
+    "next-auth": "^4.22.0",
+    "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^9.3.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "sass": "^1.62.0"
   }
 }

@@ -1,0 +1,95 @@
+$authBodyColor:#e3e9f0;
+$authCardColor:#ffff;
+$font-family:'Hanken Grotesk', sans-serif;
+.authBody{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background-color: $authBodyColor;
+    font-family: $font-family;
+}
+.authCard{
+    background-color: $authCardColor;
+    height: 540px;
+    width: 395px;
+    border: 1px solid $authCardColor;
+     margin-top: 5px;
+    box-shadow: 0px 2px 4px rgb(68 68 68 / 25%)
+}
+.authCard2{
+    background-color: $authCardColor;
+    width: 395px;
+    border: 1px solid  rgb(68 68 68 / 25%);
+     margin-top: 5px;
+    box-shadow: 0px 2px 4px rgb(68 68 68 / 25%)
+}
+.social{
+    margin-left: 8px;
+    height: 38px;
+    width: 118px;
+    border: 1px solid #1878f2;
+    border-radius: 5px;
+    display: inline-block;
+}
+.social:hover{
+    background-color: #1878f2;
+    color: white;
+
+}
+.title{
+    margin-left: 10px;
+    position: relative;
+    top: 6px;
+}
+.footer{
+    font-family: sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #f6f5f4;
+}
+ .footer a{
+text-decoration: none;
+font-size: 14px;
+color: #3983fa;
+margin-left: 4px;
+}
+
+
+.icon{
+    top: 5px;
+    position: relative;
+}
+.background{
+    z-index: -900;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.leftLarge{
+    position: absolute;
+    width: 400px;
+    bottom: 0;
+    left: 0;
+    
+}
+.rightLarge{
+    position: absolute;
+    width: 400px;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width:1110px) {
+    .leftLarge{
+        display: none;
+    }
+    .rightLarge{
+        display: none;
+    }
+}
