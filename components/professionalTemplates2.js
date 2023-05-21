@@ -3,7 +3,7 @@ const professionalTemplates2 = () => {
   return (
     <>
          <div className="container-fluid">
-        <div className="row d-flex  ">
+        <div className="row d-flex justify-content-center ">
         <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 " >
             <Image className="w-100 he-auto"  src='/template2.png' height='326' width='544'></Image>
           </div>

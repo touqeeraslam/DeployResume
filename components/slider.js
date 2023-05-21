@@ -1,40 +1,67 @@
-
-import React, { Component } from "react";
+import React from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import RatingCards from './ratingCards';
 import Slider from "react-slick";
-
-export default class Slider  {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-    return (
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
-    );
-  }
+import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
+const slider = () => {
+  
+  return (
+    <>
+         <Swiper
+        slidesPerView={1}
+        centeredSlides={false}
+        slidesPerGroupSkip={1}
+        grabCursor={true}
+        keyboard={{
+          enabled: true,
+        }}
+        breakpoints={{
+          769: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+        }}
+        scrollbar={true}
+        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+        className="mySwiper"
+      >
+        <div className='text-center'>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RatingCards />
+        </SwiperSlide>
+        </div>
+      
+        
+      </Swiper>
+    </>
+  )
 }
+
+export default slider
