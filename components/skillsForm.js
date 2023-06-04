@@ -5,20 +5,21 @@ import { useState } from "react";
 
 const icon = <FontAwesomeIcon icon={faTrash} />;
 const skillsForm = () => {
-  const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState("");
+  const [skillArray, setSkillArray] = useState([]);
+  var c = {};
 
-  const addTodo = () => {
-    if (newTodo.trim() !== "") {
-      setTodos([...todos, newTodo]);
-      setNewTodo();
-    }
+  const data = () => {
+    var x = { id: "1", value: 0 };
+    let copyArray = [...skillArray];
+    copyArray.push(x);
+    setSkillArray(copyArray);
+    //  setSkillArray();
+    // skillArray.push(x);
+    console.log(skillArray);
   };
 
-  const removeTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+  const ratingChanged = (newRating, index) => {
+    console.log(newRating);
   };
 
   return (
@@ -30,63 +31,49 @@ const skillsForm = () => {
             <h2 className="text-primary fw-lighter">
               What skills what you like to highlight?
             </h2>
+            {skillArray &&
+              skillArray.map((e, index) => {
+                return (
+                  <>
+                    <div className="row justify-content-center">
+                      <div className="col-xl-5 col-lg-5 ">
+                        <ReactStars
+                          onChange={ratingChanged}
+                          count={5}
+                          size={35}
+                          color2={"#ffd700"}
+                        />
+                      </div>
+                      <div className="col-7">
+                        <div className="row">
+                          <div className="col-10">
+                            <input id="in1" type="text" className="input" />
+                          </div>
+                          <div className="col-1 py-2">
+                            <a onClick={() => removeTodo(index)} href="#">
+                              {icon}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </>
+                );
+              })}
             <div className="row justify-content-center">
               <div className="col-xl-5 col-lg-5 ">
-                <ReactStars count={5} size={35} color2={"#ffd700"} />
+                <ReactStars
+                  onChange={ratingChanged}
+                  count={5}
+                  size={35}
+                  color2={"#ffd700"}
+                />
               </div>
               <div className="col-7">
                 <div className="row">
                   <div className="col-10">
-                    <input
-                      id="in1"
-                      type="text"
-                      className="input"
-                      value={newTodo}
-                      onChange={(e) => setNewTodo(e.target.value)}
-                    />
-                    <div>
-                      {todos.map((todo, index) => (
-                        <div key={index}>
-                          <div className="row justify-content-center">
-                            <div className="col-xl-5 col-lg-5 ">
-                              <ReactStars
-                                count={5}
-                                size={35}
-                                color2={"#ffd700"}
-                              />
-                            </div>
-                            <div className="col-7">
-                              <div className="row">
-                                <div className="col-10">
-                                  <input
-                                    id="in1"
-                                    type="text"
-                                    className="input "
-                                    value={newTodo}
-                                    onChange={(e) => setNewTodo(e.target.value)}
-                                  />
-                                  <div>
-                                    {todos.map((todo, index) => (
-                                      <div key={index}>
-                                        {/* {todo}
-            <button onClick={() => removeTodo(index)}>Remove</button> */}
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                                <div className="col-1 py-2">
-                                  <a onClick={() => removeTodo(index)} href="#">
-                                    {icon}
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          {/* {todo}
-            <button onClick={() => removeTodo(index)}>Remove</button> */}
-                        </div>
-                      ))}
-                    </div>
+                    <input id="in1" type="text" className="input" />
                   </div>
                   <div className="col-1 py-2">
                     <a onClick={() => removeTodo(index)} href="#">
@@ -96,13 +83,13 @@ const skillsForm = () => {
                 </div>
               </div>
 
-              <a
-                className="text-decoration-none font-16  float-right2"
-                onClick={addTodo}
-              >
-                + Add one more
-              </a>
               <div className="footer">
+                <a
+                  onClick={() => data()}
+                  className="text-decoration-none font-16 py-5 "
+                >
+                  + Add one more
+                </a>
                 <div className="row  ">
                   <div className="col-6">
                     <div className="pt-4">

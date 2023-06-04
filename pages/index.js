@@ -18,21 +18,11 @@ import Slider from "@/components/slider"
 import Footer from "@/components/footer"
 import Footer2 from "@/components/footerSocialMEdia"
 import Footer3 from "@/components/footerLast"
+import Navbar2 from "@/components/navbar2"
 
 
-import Router, { useRouter } from "next/router"
-import { useEffect } from "react"
 const index = () => {
-  const router = useRouter()
-  useEffect(()=>{
-    var x = localStorage.getItem('loggedIn')
-    if(x=='logged'){
-
-    }
-    else{
-      Router.push('/auth/login')
-    }
-  })
+  
   return (
     <>
     <Head>
@@ -40,21 +30,24 @@ const index = () => {
     </Head>
     
     <div className="font-hanken ">
-         <Navbar />
+      {/* <Navbar /> */}
+         <Navbar2 />
         <Jumbotron /> 
         <div className="mt-4 py-4 bottom-border">
         
         <Media />
       <div className="my-3 mx-3">
-        <div className="row">
-          <div className="col-3">
+        <div className="container sliders">
+        <div className="row justify-content-center">
+          <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 slider1">
       <Card />
 
           </div>
-          <div className="col-9">
+          <div className="col-9 slider2" >
         <Slider />
 
           </div>
+        </div>
         </div>
       </div>
         <Benefits />

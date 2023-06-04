@@ -15,16 +15,16 @@ const media = () => {
             <Image src='/ihuff.png' width='141' height='16' alt="Ihuffposti"></Image>
         </div>
         <div className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-12  ">
-            <Image src='/lifehacker.png' width='66' height='16' alt="Ihuffposti"></Image>
+            <Image src='/lifehacker.png' width='66' height='16' alt="Life Hacker"></Image>
         </div>
         <div className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-12">
-            <Image src='/business.png' width='110' height='16' alt="Ihuffposti"></Image>
+            <Image src='/business.png' width='110' height='16' alt="Business"></Image>
         </div>
         <div className=" col-xl-2 col-lg-2 col-md-3 col-sm-4 col-12 ">
-            <Image src='/financial.png' width='183' height='15' alt="Ihuffposti"></Image>
+            <Image src='/financial.png' width='183' height='15' alt="Financial"></Image>
         </div>
         <div className="col-xl-2 col-lg-2 col-md-3 col-sm-4  col-12">
-            <Image src='/forbes.png' width='63' height='16' alt="Ihuffposti"></Image>
+            <Image src='/forbes.png' width='63' height='16' alt="Forbes"></Image>
         </div>
         </div>
       </div>
